@@ -1,15 +1,15 @@
 const canvas = document.getElementById("renderCanvas"); // Get the canvas element
 
 const engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
-new BABYLON.Color3.Red();
-new BABYLON.Color3.Green();
-new BABYLON.Color3.Blue();
-new BABYLON.Color3.Black();
-new BABYLON.Color3.White();
-new BABYLON.Color3.Purple();
-new BABYLON.Color3.Magenta();
-new BABYLON.Color3.Yellow();
-new BABYLON.Color3.Gray(), new BABYLON.Color3.Teal();
+// new BABYLON.Color3.Red();
+// new BABYLON.Color3.Green();
+// new BABYLON.Color3.Blue();
+// new BABYLON.Color3.Black();
+// new BABYLON.Color3.White();
+// new BABYLON.Color3.Purple();
+// new BABYLON.Color3.Magenta();
+// new BABYLON.Color3.Yellow();
+// new BABYLON.Color3.Gray(), new BABYLON.Color3.Teal();
 
 // Add your code here matching the playground format
 const createScene = function () {

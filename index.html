@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Babylon Template</title>
+    <title>Babylon Dev Test</title>
 
     <style>
       html,
@@ -27,10 +27,37 @@
   </head>
 
   <body>
-    <canvas id="renderCanvas" touch-action="none"></canvas>
-    <!-- touch-action="none" for best results from PEP -->
+    <div id="holder">
+      <canvas id="renderCanvas" touch-action="none"></canvas>
+      <!-- touch-action="none" for best results from PEP -->
 
-    <script src="./scenes/houseScene.js"></script>
-    <!-- <script src="./scenes/houseScene_02.js"></script> -->
+      <!-- <script src="./scenes/houseScene.js"></script> -->
+      <!-- <script src="./scenes/houseScene_02.js"></script> -->
+      <!-- <script src="./scenes/houseScene_03.js"></script> -->
+      <script src="./scenes/villageScene.js"></script>
+      <!-- <script src="./scenes/carHouseScene.js"></script> -->
+    </div>
+
+    <div id="instructions">
+      <br />
+      <h2>Instructions</h2>
+      <br />
+      Instructions Instructions Instructions Instructions Instructions
+      Instructions Instructions Instructions Instructions Instructions
+    </div>
+
+    <style>
+      #holder {
+        width: 80%;
+        height: 100%;
+        float: left;
+      }
+      #instructions {
+        width: 20%;
+        height: 100%;
+        float: left;
+        background-color: grey;
+      }
+    </style>
   </body>
 </html>

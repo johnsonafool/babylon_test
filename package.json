@@ -1,0 +1,14 @@
+{
+  "name": "babylon_test",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/johnsonafool/babylon_test.git",
+  "author": "johnsonafool <88415078+johnsonafool@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "earcut": "^2.2.4"
+  },
+  "devDependencies": {
+    "@types/earcut": "^2.1.1"
+  }
+}

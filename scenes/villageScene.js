@@ -2,7 +2,6 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
 
 const engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
 
-// Add your code here matching the playground format
 const createScene = function () {
   const scene = new BABYLON.Scene(engine);
 
@@ -13,33 +12,24 @@ const createScene = function () {
     15,
     new BABYLON.Vector3(0, 0, 0)
   );
-
   camera.attachControl(canvas, true);
-
   const light = new BABYLON.HemisphericLight(
     "light",
     new BABYLON.Vector3(1, 1, 0)
   );
 
+  // Dude animation triggered here
   BABYLON.SceneLoader.ImportMeshAsync(
-    "",
-    "https://assets.babylonjs.com/meshes/",
-    "both_houses_scene.babylon"
+    "him",
+    "/scenes/",
+    "Dude.babylon",
+    scene
   ).then((result) => {
-    const house1 = scene.getMeshByName("detached_house");
-    house1.position.y = 0;
-    const house2 = result.meshes[2];
-    house2.position.y = 0;
-  });
+    var dude = result.meshes[0];
+    dude.scaling = new BABYLON.Vector3(0.25, 0.25, 0.25);
 
-  const ground = BABYLON.MeshBuilder.CreateGround("ground", {
-    width: 10,
-    height: 10,
+    scene.beginAnimation(result.skeletons[0], 0, 100, true, 1.0);
   });
-
-  const groundMat = new BABYLON.StandardMaterial("groundMat");
-  groundMat.diffuseColor = new BABYLON.Color3(0, 1, 0);
-  ground.material = groundMat; //Place the material property of the ground
 
   return scene;
 };
